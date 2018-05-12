@@ -1,9 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
 
 int knapsack(int wt[],int val[],int n,int W)
 {
-        int arr[W+1][n+1];
+        int arr[1000][1000];
 
         for(int i=0; i<=W; i++)
                 for(int j=0; j<=n; j++)

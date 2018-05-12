@@ -5,7 +5,7 @@ void coin_change(int coin[],int val,int n)
 {
         int i, j, x, y;
 
-        int table[val+1][n];
+        int table[100][100];
         for (i=0; i<n; i++)
                 table[0][i] = 1;
         for (i = 1; i < val+1; i++)
@@ -25,10 +25,13 @@ void coin_change(int coin[],int val,int n)
 
 int main()
 {
+        int t;
+        while(t--){
         int n,coin[100],val;
         cin>>val>>n;
         for(int i=0; i<n; i++) cin>>coin[i];
 
         coin_change(coin,val,n);
+        }
         return 0;
 }

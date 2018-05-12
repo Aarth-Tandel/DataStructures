@@ -1,9 +1,10 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int lis(int a[],int n)
+int lis(long long int a[],long long int n)
 {
-  int arr[n];
+  long long int arr[n];
   for(int i=0 ; i<n ;i++) arr[i]=1;
 
   for(int i=1;i<n;i++)
@@ -11,7 +12,7 @@ int lis(int a[],int n)
       if(a[i]>a[j] && arr[i]<arr[j]+1)
         arr[i]=arr[j]+1;
 
-  int big=0;
+  long long int big=0;
   for(int i=0;i<n;i++)
   {
     if(big<arr[i])  big=arr[i];
@@ -21,9 +22,10 @@ int lis(int a[],int n)
 
 int main()
 {
-  int n,a[100];
+  freopen("input.txt", "r", stdin); // redirects standard
+  long long int n,a[1000005];
   cin>>n;
   for(int i=0;i<n;i++)  cin>>a[i];
-  cout<<lis(a,n);
+  cout<<lis(a,n)<<endl;
   return 0;
 }
